@@ -24,6 +24,20 @@ app.use(methodOverride("_method"));
 ///////////////////////
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
 
+app.get('/', (req, res) => {
+    res.send(`
+    <h1>You almost made it!</h1>
+    <a href="/animals">Click right here to see a list of animals!</a>`)
+})
+
+
+// Index - GET - Show list of animals - /animals
+app.get('/animals', async(req, res) => {
+    const allAnimals = await Animal.find({})
+
+    res.render("index.ejs", {animals: allAnimals})
+})
+
 ///////////////////////////
 // Server Listener
 ///////////////////////////
