@@ -14,6 +14,10 @@
     <h2>Extinct: <%= animal.extinct %></h2>
     <h2>Location: <%= animal.location %></h2>
     <h2>Life Expectancy: <%= animal.lifeExpectancy %> years</h2>
+
+    <form method="POST" action="/animals/<%=animal.id%>?_method=DELETE">
+        <input type="submit" value="Delete Animal">
+    </form> 
     
 </body>
 </html>

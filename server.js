@@ -38,6 +38,33 @@ app.get('/animals', async(req, res) => {
     res.render("index.ejs", {animals: allAnimals})
 })
 
+// New - GET - 
+app.get('/animals/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+// Delete - DELETE
+app.delete('/animals/:id', async (req, res) => {
+    await Animal.findByIdAndDelete(req.params.id)
+    res.redirect('/animals')
+})
+
+// Update - 
+
+
+// Create - Post - Create an Animal
+app.post('/animals', async (req, res) => {
+    req.body.extinct = req.body.extinct === "on" ? true : false
+
+    await Animal.create(req.body)
+    
+    res.redirect('/animals')
+})
+
+
+// Edit - 
+
+//Show - GET -Show individual animal - /animals/:id
 app.get('/animals/:id', async (req, res) => {
     const foundAnimal = await Animal.findById(req.params.id)
 
