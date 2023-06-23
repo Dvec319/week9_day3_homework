@@ -49,7 +49,13 @@ app.delete('/animals/:id', async (req, res) => {
     res.redirect('/animals')
 })
 
-// Update - 
+// Update - Put - Update an Animal
+app.put('/animals/:id', async (req, res) => {
+    req.body.extinct = req.body.extinct === "on" ? true: false
+
+    await Animal.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect('/animals')
+})
 
 
 // Create - Post - Create an Animal

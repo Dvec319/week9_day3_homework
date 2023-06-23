@@ -10,7 +10,7 @@
         <a href="/animals">Head back to the list of animals!</a>
     </nav>
 
-    <form action="/animals/<%=animal._id%>?_method_PUT">
+    <form action="/animals/<%=animal._id%>?_method=PUT" method="POST">
         <input type="text" name="species" value="<%= animal.species %>">
         <br/>
         <input type="checkbox" name="extinct" <%= animal.extinct ? "checked" : ""%>>
