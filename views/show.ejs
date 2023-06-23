@@ -10,18 +10,17 @@
     <nav>
         <a href="/animals">Head back to the whole list of animals!</a>
     </nav>
-    <h1>Species: <%= animal.species %></h1>
-    
-    <h2>Extinct: <%= animal.extinct %></h2>
-    <h2>Location: <%= animal.location %></h2>
-    <h2>Life Expectancy: <%= animal.lifeExpectancy %> years</h2>
+    <h1 class="show">Species: <%= animal.species %></h1>
+    <h2 class="show">Extinct: <%= animal.extinct %></h2>
+    <h2 class="show">Location: <%= animal.location %></h2>
+    <h2 class="show">Life Expectancy: <%= animal.lifeExpectancy %> years</h2>
 
-    <form method="POST" action="/animals/<%=animal.id%>?_method=DELETE">
+    <form class="show" method="POST" action="/animals/<%=animal.id%>?_method=DELETE">
         <input type="submit" value="Delete Animal">
     </form> 
 
     <a href="/animals/<%=animal.id %>/edit">
-        <button>Edit <%= animal.species %></button>
+        <button class="show">Edit <%= animal.species %></button>
     </a>
     
 </body>

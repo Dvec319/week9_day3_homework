@@ -11,16 +11,18 @@
         <a href="/animals">Head back to the list of animals!</a>
     </nav>
 
-    <form action="/animals/<%=animal._id%>?_method=PUT" method="POST">
-        <input type="text" name="species" value="<%= animal.species %>">
+    <h1 class="edit">Edit this Animal!</h1>
+
+    <form class="edit" action="/animals/<%=animal._id%>?_method=PUT" method="POST">
+        Species: <input type="text" name="species" value="<%= animal.species %>">
         <br/>
-        <input type="checkbox" name="extinct" <%= animal.extinct ? "checked" : ""%>>
+        Extinct: <input type="checkbox" name="extinct" <%= animal.extinct ? "checked" : ""%>>
         <br/>
-        <input type="text" name="location" value="<%= animal.location %>">
+        Location: <input type="text" name="location" value="<%= animal.location %>">
         <br/>
-        <input type="number" name="lifeExpectancy" value="<%= animal.lifeExpectancy %>">
+         Life Expectancy: <input type="number" name="lifeExpectancy" value="<%= animal.lifeExpectancy %>">
         <br/>
-        <input type="submit" value="Edit Animal">
+        <input type="submit" value="Save <%= animal.species %>">
     </form>
     
 </body>

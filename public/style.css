@@ -1,3 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* All pages */
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: cornflowerblue;
+}
+
+nav {
+    font-size: 30px;
+    font-family: 'Caprasimo', cursive;
+}
+
+
+/* Index page */
+
+h1.index {
+    font-size: 50px;
+    font-family: 'Caprasimo', cursive;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 30px;
+    font-family: 'Caprasimo', cursive;
+}
+
+/* New page */
+
+h1.new {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+form.new {
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Edit page */
+
+h1.edit {
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+}
+
+form.edit {
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Show page */
+
+h1.show {
+    font-size: 40px;
+    margin: 15px;
+    font-family: 'Lora', serif;
+}
+
+h2.show {
+    font-size: 30px;
+    margin: 15px;
+    text-transform: capitalize;
+    font-family: 'Lora', serif;
+}
+
+button.show {
+    margin-top: 20px;
 }
