@@ -7,6 +7,9 @@
     <%- include('import.ejs') %>
 </head>
 <body>
+    <nav>
+        <a href="/animals">Head back to the list of animals!</a>
+    </nav>
     <h1>Add a new animal!</h1>
     <form action="/animals" method="POST">
         Species: <input type="text" name="species" required/>
