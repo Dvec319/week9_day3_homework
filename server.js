@@ -38,12 +38,12 @@ app.get('/animals', async(req, res) => {
     res.render("index.ejs", {animals: allAnimals})
 })
 
-// New - GET - 
+// New - GET -  Show a form to create a new animal
 app.get('/animals/new', (req, res) => {
     res.render('new.ejs')
 })
 
-// Delete - DELETE
+// Delete - DELETE - Delete an animal
 app.delete('/animals/:id', async (req, res) => {
     await Animal.findByIdAndDelete(req.params.id)
     res.redirect('/animals')
@@ -62,7 +62,11 @@ app.post('/animals', async (req, res) => {
 })
 
 
-// Edit - 
+// Edit - GET - Show a form to edit an animal and save the changes
+app.get('/animals/:id/edit', async (req, res) => {
+    const animal = await Animal.findById(req.params.id)
+    res.render('edit.ejs', {animal})
+})
 
 //Show - GET -Show individual animal - /animals/:id
 app.get('/animals/:id', async (req, res) => {
