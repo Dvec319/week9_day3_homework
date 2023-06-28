@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride("_method"));
-app.use(animalRouter)
+app.use('/animals', animalRouter)
 
 ///////////////////////
 // Declare Routes and Routers
